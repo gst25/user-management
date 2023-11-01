@@ -1,6 +1,4 @@
 package dev.rahul.usermanagement.controllers;
-
-
 import dev.rahul.usermanagement.dtos.SetRoleRequestDto;
 import dev.rahul.usermanagement.dtos.UserDto;
 import dev.rahul.usermanagement.serivces.UserService;
