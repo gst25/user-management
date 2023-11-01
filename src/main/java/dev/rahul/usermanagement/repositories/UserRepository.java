@@ -1,8 +1,6 @@
 package dev.rahul.usermanagement.repositories;
 
 import dev.rahul.usermanagement.models.User;
-import jakarta.persistence.Id;
-import org.hibernate.annotations.Comment;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

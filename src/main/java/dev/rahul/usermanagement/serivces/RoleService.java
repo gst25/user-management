@@ -2,7 +2,6 @@ package dev.rahul.usermanagement.serivces;
 
 import dev.rahul.usermanagement.models.Role;
 import dev.rahul.usermanagement.repositories.RoleRepository;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 @Service

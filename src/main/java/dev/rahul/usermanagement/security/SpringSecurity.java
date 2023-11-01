@@ -12,7 +12,7 @@ public class SpringSecurity {
 
     @Bean
     public SecurityFilterChain filteringCriteria(HttpSecurity http) throws Exception {
-        http.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll()).csrf(AbstractHttpConfigurer::disable);;
+        http.authorizeHttpRequests(authorize -> authorize.anyRequest().permitAll()).csrf(AbstractHttpConfigurer::disable);
         return http.build();
     }
 

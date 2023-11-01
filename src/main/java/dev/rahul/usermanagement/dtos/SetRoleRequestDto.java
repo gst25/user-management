@@ -1,6 +1,5 @@
 package dev.rahul.usermanagement.dtos;
 
-import dev.rahul.usermanagement.models.Role;
 import lombok.Getter;
 import lombok.Setter;
 
