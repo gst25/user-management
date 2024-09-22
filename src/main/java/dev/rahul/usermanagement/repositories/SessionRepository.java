@@ -2,6 +2,7 @@ package dev.rahul.usermanagement.repositories;
 
 import dev.rahul.usermanagement.models.Session;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
@@ -9,7 +10,9 @@ import java.util.Optional;
 
 @Repository
 public interface SessionRepository extends JpaRepository<Session, Long> {
-    Optional<Session> findByTokenAndId(String token, Long userId);
 
-    List<Session> findByUsersId(Long id);
+    @Query("SELECT s FROM Session s WHERE s.token = :token AND s.id = :id")
+    Optional<Session> findByTokenAndUser(String token, Long id);
+
+    List<Session> findByUserId(Long id);
 }

@@ -17,7 +17,7 @@ public class Session extends BaseModal{
     private Date expiryDate;
 
     @ManyToOne
-    private User users;
+    private User user;
 
     @Enumerated(EnumType.ORDINAL)
     private SessionStatus sessionStatus;

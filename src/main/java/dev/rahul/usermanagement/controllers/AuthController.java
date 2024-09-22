@@ -1,10 +1,14 @@
 package dev.rahul.usermanagement.controllers;
 
 import dev.rahul.usermanagement.dtos.*;
+import dev.rahul.usermanagement.models.SessionStatus;
 import dev.rahul.usermanagement.serivces.AuthService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/auth")
@@ -33,7 +37,7 @@ public class AuthController {
     }
 
     @PostMapping("/validate")
-    public ResponseEntity<UserDto> validateToken(@RequestBody ValidateTokenRequestDto request){
+    public SessionStatus validateToken(@RequestBody ValidateTokenRequestDto request) {
         return authService.validateToken(request.getToken(),request.getUserId());
     }
 
